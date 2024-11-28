@@ -5,7 +5,7 @@ function openWaze() {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (isMobile) {
-        window.location.href = `${destinationOnMobile}`;
+        window.location.href = destinationOnMobile;
     } else {
         window.open(`https://www.waze.com/ul?ll=${destinationOnPc}`, "_blank");
     }
