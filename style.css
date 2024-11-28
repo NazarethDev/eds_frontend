@@ -92,4 +92,15 @@ nav{
     font-size: 16px;
     font-weight: bold;
   }
+
+  .btn-text-color{
+    color: #f8f9fa;
+  }
   
+  .debug-border {
+    border: 1px solid red;
+}
+.frame{
+  display: flex;
+  box-sizing: content-box;
+}
