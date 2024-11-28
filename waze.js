@@ -1,5 +1,5 @@
 function openWaze() {
-    const destinationAddress = "waze://?q=Rua+Ana+Maria+Sirani,+546&navigate=yes";
+    const destinationAddress = "https://www.waze.com/pt-BR/live-map/directions/br/sp/r.-ana-maria-sirani,-546?navigate=yes&to=place.ChIJUaGehy5kzpQRtHIyv_glIIg";
     const destinationCoordinates = "waze://?ll=-23.548893465107557,-46.432153821794834&navigate=yes";
     
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
