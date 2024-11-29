@@ -97,15 +97,63 @@ nav{
     color: #f8f9fa;
   }
 
-  .glow-hover:hover {
-    box-shadow:  0 0 20px 5px rgba(252, 106, 27);
+  .glow-hover-consertos:hover {
+    box-shadow:  0 0 20px 5px rgba(244, 164, 96);
     transform: scale(1.05); 
+    border-radius: 10px;
   }
   
-  .glow-hover:active {
-    box-shadow:  0 0 30px 10px rgba(252, 106, 27);
+  .glow-hover-consertos:active {
+    box-shadow:  0 0 30px 10px rgba(244, 164, 96);
     transform: scale(0.98);
+    border-radius: 10px;
   }
+
+
+
+  .glow-hover-otimizacao:hover {
+    box-shadow:  0 0 20px 5px rgba(0, 191, 255);
+    transform: scale(1.05); 
+    border-radius: 10px;
+  }
+  
+  .glow-hover-otimizacao:active {
+    box-shadow:  0 0 30px 10px rgba(0, 191, 255);
+    transform: scale(0.98);
+    border-radius: 10px;
+  }
+
+
+
+  .glow-hover-criacao:hover {
+    box-shadow:  0 0 20px 5px rgba(253, 238, 11);
+    transform: scale(1.05); 
+    border-radius: 10px;
+  }
+  
+  .glow-hover-criacao:active {
+    box-shadow:  0 0 30px 10px rgba(253, 238, 11);
+    transform: scale(0.98);
+    border-radius: 10px;
+  }
+
+
+
+  .glow-hover-impressao:hover {
+    box-shadow:  0 0 20px 5px rgba(207, 0, 109);
+    transform: scale(1.05); 
+    border-radius: 10px;
+  }
+  
+  .glow-hover-impressao:active {
+    box-shadow:  0 0 30px 10px rgba(207, 0, 109);
+    transform: scale(0.98);
+    border-radius: 10px;
+  }
+
+
+
+
 
   .glow-hover-whatsapp:hover {
     box-shadow: 0 0 20px 5px rgba(34,139,34);
@@ -119,7 +167,7 @@ nav{
 
   .glow-hover-instagram:hover {
     box-shadow: 0 0 20px 5px rgba(205,92,92); 
-    transform: scale(1.05); /* Pequeno aumento no tamanho */
+    transform: scale(1.05);
   }
   
   .glow-hover-instagram:active {
