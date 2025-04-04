@@ -65,100 +65,111 @@
 
         <section class="container mt-5 mb-3 text-center">
             <div>
-                <h1>Solicitação de conserto de eletrônicos</h1>
+                <h2>Solicitação de conserto de eletrônicos</h2>
                 <p>Preencha os dados do formulário, e entraremos em contato com você para mais detalhes!</p>
                 <p>Pedimos que preencha corretamente o número de telefone para o contato.</p>
             </div>
         </section>
 
-        <section id="formulario" class="container mt-3 mb-3 text-start">
-            <div class="row">
-                <div class="col-6">
-                    <input class="form-control" type="text" placeholder="Qual seu nome completo?"
-                        aria-label="default input example">
-                </div>
-            </div>
+        <div class="container mt-3 mb-3">
+            <div class="row g-5 d-flex flex-wrap align-items-start"> <!-- Reduzindo espaço entre colunas -->
 
-            <div class="row mt-3">
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="Telefone contato"
-                        aria-label="Telefone contato">
-                </div>
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="Email" aria-label="Email">
-                </div>
-            </div>
-
-            <div class="row mt-3 mb-3">
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="Telefone alternativo"
-                        aria-label="Telefone alternativo">
-                </div>
-                <div class="col-3">
-                    <input type="text" class="form-control" placeholder="CPF (se deseja nota fiscal)" aria-label="CPF">
-                </div>
-            </div>
-
-            <div class="row">
-                <p class="col-6 text-center">Gostaria deuma visita técnica? é só nos indicar seu endereço</p>
-            </div>
-
-            <div class="row mt-2 mb-3">
-                <div class="col-4">
-                    <input type="text" class="form-control" placeholder="Logradouro" aria-label="Telefone alternativo">
-                </div>
-                <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Número" aria-label="CPF">
-                </div>
-            </div>
-
-            <div class="row mt-2 mb-3">
-                <div class="col-2">
-                    <input type="text" class="form-control" placeholder="CEP" aria-label="Telefone alternativo">
-                </div>
-                <div class="col-4">
-                    <input type="text" class="form-control" placeholder="Complemento" aria-label="CPF">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <p class="col-6 text-center">Quando gostaria da visita técnica?</p>
-            </div>
-            <div class="row mt-3 mb-3">
-                <div class="col-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                            value="Manhã">
-                        <label class="form-check-label" for="exampleRadios1">
-                            Manhã
-                        </label>
+                <!-- Primeira Section (Formulário) -->
+                <section id="formulario" class="col-md-6 col-12 text-start px-1">
+                    <div class="row">
+                        <div class="col-12">
+                            <input class="form-control" type="text" placeholder="Qual seu nome completo?"
+                                aria-label="default input example">
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                            value="Tarde" checked>
-                        <label class="form-check-label" for="exampleRadios2">
-                            Tarde
-                        </label>
+
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Telefone contato"
+                                aria-label="Telefone contato">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                            value="Indiferente">
-                        <label class="form-check-label" for="exampleRadios3">
-                            Indiferente
-                        </label>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Telefone alternativo"
+                                aria-label="Telefone alternativo">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="CPF (se deseja nota fiscal)"
+                                aria-label="CPF">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <label for="datePicker" class="form-label">Escolha a data:</label>
-                    <input type="date" id="dataAgendamento" class="form-control">
-                </div>
+
+                    <div class="d-flex text-center">
+                        <p class=" col-12 text-center">Gostaria de uma visita técnica? É só nos indicar seu endereço</p>
+                    </div>
+
+                    <div class="row mt-2 mb-3">
+                        <div class="col-8">
+                            <input type="text" class="form-control" placeholder="Logradouro" aria-label="Logradouro">
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control" placeholder="Número" aria-label="Número">
+                        </div>
+                    </div>
+
+                    <div class="row mt-2 mb-3">
+                        <div class="col-4">
+                            <input type="text" class="form-control" placeholder="CEP" aria-label="CEP">
+                        </div>
+                        <div class="col-8">
+                            <input type="text" class="form-control" placeholder="Complemento" aria-label="Complemento">
+                        </div>
+                    </div>
+
+                    <div class="d-flex text-center">
+                        <p class="col-12 text-center">Quando gostaria da visita técnica?</p>
+                    </div>
+
+                    <div class="row mt-3 mb-3">
+                        <div class="col-6">
+                            <div class="row mt-3">
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios1" value="Manhã">
+                                        <label class="form-check-label" for="exampleRadios1">Manhã</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="exampleRadios2" value="Tarde" checked>
+                                        <label class="form-check-label" for="exampleRadios2">Tarde</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center align-items-center">
+                                <div class="form-check d-flex align-items-center">
+                                    <input class="form-check-input me-2" type="radio" name="exampleRadios" id="exampleRadios2" value="Indiferente">
+                                    <label class="form-check-label" for="exampleRadios2">Indiferente</label>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="col-6">
+                            <label for="datePicker" class="form-label">Escolha a data:</label>
+                            <input type="date" id="dataAgendamento" class="form-control">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Segunda Section (Nova) -->
+                <section class="col-md-6 col-12 px-1">
+                    <h3>Detalhes do serviço de conserto</h3>
+                    <p>Esta é a nova seção que ficará ao lado do formulário.</p>
+                </section>
+
             </div>
-        </section>
-        <section>
-            
-        </section>
-
-
-
+        </div>
     </main>
 </body>
 
