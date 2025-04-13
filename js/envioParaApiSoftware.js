@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => {
             if (response.ok) {
                 alert('Formulário enviado com sucesso!');
-                // window.location.reload(); // se quiser limpar
+                 window.location.reload(); // se quiser limpar
             } else {
                 return response.text().then(text => {
                     throw new Error('Erro ao enviar: ' + text);

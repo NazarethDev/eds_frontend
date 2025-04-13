@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamentos para Fotografias</title>
+    <title>Orçamentos para Folhas Avulsas</title>
 
     <link rel="shortcut icon" href="assets/favicon.jpeg" type="image/x-icon">
 
@@ -74,7 +74,7 @@
         <div class="container mt-3 mb-3">
             <div class="d-flex justify-content-center">
                 <form action="post" id="formularioImpressao" enctype="multipart/form-data"
-                    action="http://localhost:8080/impressao" class="w-75">
+                    action="http://localhost:8080/design" class="w-75">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-floating mb-2">
@@ -117,7 +117,7 @@
                             </div>
                         </div>
 
-                        <h3 class="text-center">Detalhes da impressão das fotos</h3>
+                        <h3 class="text-center">Detalhes da impressão dos arquivos</h3>
                         <div class="row mb-2 mt-3">
                             <div class="col-12">
                                 <div class="form-floating">
@@ -132,6 +132,8 @@
                                         <option value="Papel fotográfico 180g">Papel fotográfico 180g</option>
                                         <option value="Papel offset 180g">Papel offset 180g</option>
                                         <option value="Papel opaline 240g">Papel opaline 240g</option>
+                                        <option value="Papel canson 240g">Papel canson 240g</option>
+                                        <option value="Papel canson 300g">Papel canson 300g</option>
                                         <option value="Papel fotográfico dupla face 180g">Papel fotográfico dupla face
                                             180g</option>
                                     </select>
@@ -148,10 +150,10 @@
                                     <label for="nomeCliente">Quantidade de cópias</label>
                                 </div>
                             </div>
-                            <div class="col-6 justify-content-center"> 
+                            <div class="col-6 justify-content-center">
                                 <div class="form-floating">
-                                    <select class="form-select" id="ladosImpressap"
-                                        aria-label="Lados impressos" name="ladosImpressap" required>
+                                    <select class="form-select" id="ladosImpressap" aria-label="Lados impressos"
+                                        name="ladosImpressap" required>
                                         <option value="Frente e verso">Frente e verso</option>
                                         <option value="Frente">Frente</option>
                                     </select>
@@ -160,8 +162,12 @@
                             </div>
                         </div>
 
-                        <div class="mb-3 text-center justify-content-center">
-                            <label for="formFile" class="form-label">Arquivo para impressão</label>
+                        <div class="mb-3 text-center justify-content-center row">
+                            <label for="formFile" class="form-label">Conte suas ideias para o design</label>
+                            <textarea class="form-control" type="text" id="descricao" name="descricao" rows="4"></textarea>
+                        </div>
+                        <div class="mb-3 text-center justify-content-center row">
+                            <label for="formFile" class="form-label">Arquivos de referência - caso possua</label>
                             <input class="form-control" type="file" id="formFile" name="arquivo">
                         </div>
 
