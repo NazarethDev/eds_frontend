@@ -1,0 +1,27 @@
+/* Submenu padrão */
+.dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 0;
+    display: none;
+    position: absolute;
+  }
+  
+  /* Hover em telas grandes */
+  @media (min-width: 992px) {
+    .dropdown-submenu:hover > .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  /* Submenu visível se classe 'show' estiver ativa */
+  .dropdown-submenu.show > .dropdown-menu {
+    display: block;
+    position: static;
+    margin-left: 1rem;
+  }
+  

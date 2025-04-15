@@ -13,7 +13,7 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 
-    <link rel="stylesheet" href="styles\formsStyles.css">
+    <link rel="stylesheet" href="styles\submenuDropDown.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -27,46 +27,61 @@
 
 <body>
     <main>
-        <nav class="navbar navbar-expand-lg fixed-top mb-5">
+        <nav class="navbar navbar-expand-lg mb-5">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page"
-                                href="file:///C:/Users/nazar/IdeaProjects/Front-end/eds_frontend/index.html#">Home</a>
+                            <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sobrenos">Sobre nós</a>
+                            <a class="nav-link" href="index.html/#sobrenos">Sobre nós</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Orçamentos
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Orçamentos de eletrônica
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://forms.gle/NoS2X9CqosZRKsRo6"
-                                        target="_blank">Consertos,
-                                        reparos e montagem</a></li>
-                                <li><a class="dropdown-item" href="https://forms.gle/zfg6KyfaZw7vtReT8"
-                                        target="_blank">Software e
-                                        Otimização</a></li>
-                                <li><a class="dropdown-item" href="https://forms.gle/JQNi5aBo1QnVhnjb8"
-                                        target="_blank">Criação de
-                                        design</a></li>
-                                <li><a class="dropdown-item" href="https://forms.gle/QLGBWv5UTmPNU6b9A"
-                                        target="_blank">Impressão de
-                                        arquivos</a></li>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoConserto.html">Consertos</a></li>
+                                <li><a class="dropdown-item" href="orcamentoSoftware.html">Software</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Serviços gráficos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
+                                <li><a class="dropdown-item" href="orcamentoFografia.html">Fotografias</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoFlyers.html">Flyers</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCalendario.html">Calendários</a></li>
+
+
+                            </ul>
+                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#contato">Contato</a>
+                            <a class="nav-link" href="index.html/#contato">Contato</a>
                         </li>
                     </ul>
+
+                    <form class="d-flex mt-2 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Contato ou email na encomenda"
+                            aria-label="Search">
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -210,7 +225,8 @@
                                 </div>
                                 <div class="col-6">
                                     <label for="datePicker" class="form-label">Escolha a data:</label>
-                                    <input type="date" class="form-control datepicker" id="data" placeholder="Selecione uma data">
+                                    <input type="date" class="form-control datepicker" id="data"
+                                        placeholder="Selecione uma data">
                                 </div>
                             </div>
                         </section>
@@ -396,6 +412,8 @@
     </main>
     <script src="js\envioParaApiSoftware.js"></script>
     <script src="js\controleDatasAgendamento.js"></script>
+    <script src="js\navBarForSmallScreens.js"></script>
+
 </body>
 
 </html>
