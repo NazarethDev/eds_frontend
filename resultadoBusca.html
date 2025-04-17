@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="PT-BR" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova busca</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/favicon.jpeg" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg mb-5">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html/#sobrenos">Sobre nós</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Orçamentos de eletrônica
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoConserto.html">Consertos</a></li>
+                                <li><a class="dropdown-item" href="orcamentoSoftware.html">Software</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Serviços gráficos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
+                                <li><a class="dropdown-item" href="orcamentoFografia.html">Fotografias</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoFlyers.html">Flyers</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCalendario.html">Calendários</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html/#contato">Contato</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex mt-2 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Contato ou email na encomenda"
+                            aria-label="Search">
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Adicione isso no <head> da página, se ainda não tiver -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <section class="container-fluid mt-5 w-75">
+            <div class="col-12">
+                <div id="resultadosBusca" class="justify-content-center">
+
+                    <div class="row mb-4 p-3 border rounded" id="software">
+                        <p><strong>Serviço de software</strong></p>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <p id="nomeClienteSoftware">aqui irá o nome do cliente</p>
+                                <p id="emailClienteSoftware">aqui irá o email do cliente</p>
+                                <p id="dataSolicitacaoSoftware">aqui aparece a data da solicitação</p>
+                                <p id="statusSoftware">aqui irá e status do serviço</p>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p id="dispositivoSoftware">dispositivo para o serviço</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p id="tempoUsoSoftware">tempo de uso do dispositivo</p>
+                                    </div>
+                                </div>
+                                <p id="servicos">aqui estarão os serviços solicitados separados por vírgula</p>
+                                <p id="detalhesServico">Caso o cliente tenha dado informações adicionais, elas
+                                    aparecerão aqui.</p>
+                                <p id="periodoSoftware">aqui aparece o período, caso haja visita</p>
+                                <p id="dataSoftware">aqui aparece a data, caso solicitada visita</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 p-3 border rounded" id="conserto">
+                        <p><strong>Serviço de conserto</strong></p>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <p id="nomeClienteConserto">aqui irá o nome do cliente</p>
+                                <p id="emailClienteConserto">aqui irá o email do cliente</p>
+                                <p id="dataSolicitacaoConserto">aqui aparece a data da solicitação</p>
+                                <p id="statusConserto">aqui irá e status do serviço</p>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="row">
+                                    <div class="col-6" id="dispositivoConserto">
+                                        <p>aqui aparece o tipo do dispositivo</p>
+                                    </div>
+                                    <div class="col-6" id="fabricanteConserto">
+                                        <p>aqui aparece o fabricante</p>
+                                    </div>
+                                </div>
+                                <p id="descricaoProblemaConserto">Aqui aparece a descrição do problema</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="" id="arquivoConserto">Link com a imagem que mostra o defeito.</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <p id="tempoDeUsoConserto">aqui aparece o tempo de uso do dispositivo.</p>
+                                    </div>
+                                </div>
+                                <p id="periodoConserto">aqui aparece o período, caso haja visita</p>
+                                <p id="dataConserto">aqui aparece a data, caso solicitada visita</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 p-3 border rounded" id="impressao">
+                        <p><strong>Serviço de impressão</strong></p>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <p id="nomeClienteImpressao">aqui irá o nome do cliente</p>
+                                <p id="emailClienteImpressao">aqui irá o email do cliente</p>
+                                <p id="dataSolicitacaoImpressao">aqui aparece a data da solicitação</p>
+                                <p id="statusImpressao">aqui irá e status do serviço</p>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <p id="produtoImpressao">Aqui será o produto a ser impresso</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p id="coresImpressao_impressao">cores da impressão</p>
+                                        <p id="ladosImpressao_impressao">lados a imprimir</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p id="unidadesImpressao">unidades a imprimir</p>
+                                        <p id="materialImpressao_impressao">material da impressao</p>
+                                    </div>
+                                </div>
+                                <a href="" id="arquivoImpressao_impressao">Arquivo para impressão</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 p-3 border rounded" id="criacaoDesign">
+                        <p><strong>Serviço de impressão e criação de design</strong></p>
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <p id="nomeClienteDesign">aqui irá o nome do cliente</p>
+                                <p id="emailClienteDesign">aqui irá o email do cliente</p>
+                                <p id="dataSolicitacaoDesign">aqui aparece a data da solicitação</p>
+                                <p id="status">aqui irá e status do serviço</p>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <p id="produtoDesign">Aqui será o produto a ser impresso</p>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p id="coresImpressaoDesign">cores da impressão</p>
+                                        <p id="ladosImpressaoDesign">lados a imprimir</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p id="unidadesDesign">unidades a imprimir</p>
+                                        <p id="materialImpressaoDesign">material da impressao</p>
+                                    </div>
+                                </div>
+                                <p id="ideiasDesign">aqui aparecerão as sugestões de design dadas pelo cliente.</p>
+                                <a href="" id="arquivoReferenciaDesign">Arquivo referência do design a criar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
