@@ -66,134 +66,21 @@
                         </li>
                     </ul>
 
-                    <form class="d-flex mt-2 mt-lg-0" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Contato ou email na encomenda"
-                            aria-label="Search">
+                    <form id="form-busca" class="d-flex mt-2 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" id="input-busca"
+                            placeholder="Contato ou email na encomenda" aria-label="Search" required>
                         <button class="btn btn-outline-info" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
         </nav>
-
-        <!-- Adicione isso no <head> da página, se ainda não tiver -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <section class="container-fluid mt-5 w-75">
             <div class="col-12">
                 <div id="resultadosBusca" class="justify-content-center">
 
-                    <div class="row mb-4 p-3 border rounded" id="software">
-                        <p><strong>Serviço de software</strong></p>
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <p id="nomeClienteSoftware">aqui irá o nome do cliente</p>
-                                <p id="emailClienteSoftware">aqui irá o email do cliente</p>
-                                <p id="dataSolicitacaoSoftware">aqui aparece a data da solicitação</p>
-                                <p id="statusSoftware">aqui irá e status do serviço</p>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p id="dispositivoSoftware">dispositivo para o serviço</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p id="tempoUsoSoftware">tempo de uso do dispositivo</p>
-                                    </div>
-                                </div>
-                                <p id="servicos">aqui estarão os serviços solicitados separados por vírgula</p>
-                                <p id="detalhesServico">Caso o cliente tenha dado informações adicionais, elas
-                                    aparecerão aqui.</p>
-                                <p id="periodoSoftware">aqui aparece o período, caso haja visita</p>
-                                <p id="dataSoftware">aqui aparece a data, caso solicitada visita</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row mb-4 p-3 border rounded" id="conserto">
-                        <p><strong>Serviço de conserto</strong></p>
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <p id="nomeClienteConserto">aqui irá o nome do cliente</p>
-                                <p id="emailClienteConserto">aqui irá o email do cliente</p>
-                                <p id="dataSolicitacaoConserto">aqui aparece a data da solicitação</p>
-                                <p id="statusConserto">aqui irá e status do serviço</p>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <div class="row">
-                                    <div class="col-6" id="dispositivoConserto">
-                                        <p>aqui aparece o tipo do dispositivo</p>
-                                    </div>
-                                    <div class="col-6" id="fabricanteConserto">
-                                        <p>aqui aparece o fabricante</p>
-                                    </div>
-                                </div>
-                                <p id="descricaoProblemaConserto">Aqui aparece a descrição do problema</p>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a href="" id="arquivoConserto">Link com a imagem que mostra o defeito.</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <p id="tempoDeUsoConserto">aqui aparece o tempo de uso do dispositivo.</p>
-                                    </div>
-                                </div>
-                                <p id="periodoConserto">aqui aparece o período, caso haja visita</p>
-                                <p id="dataConserto">aqui aparece a data, caso solicitada visita</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4 p-3 border rounded" id="impressao">
-                        <p><strong>Serviço de impressão</strong></p>
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <p id="nomeClienteImpressao">aqui irá o nome do cliente</p>
-                                <p id="emailClienteImpressao">aqui irá o email do cliente</p>
-                                <p id="dataSolicitacaoImpressao">aqui aparece a data da solicitação</p>
-                                <p id="statusImpressao">aqui irá e status do serviço</p>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <p id="produtoImpressao">Aqui será o produto a ser impresso</p>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p id="coresImpressao_impressao">cores da impressão</p>
-                                        <p id="ladosImpressao_impressao">lados a imprimir</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p id="unidadesImpressao">unidades a imprimir</p>
-                                        <p id="materialImpressao_impressao">material da impressao</p>
-                                    </div>
-                                </div>
-                                <a href="" id="arquivoImpressao_impressao">Arquivo para impressão</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-4 p-3 border rounded" id="criacaoDesign">
-                        <p><strong>Serviço de impressão e criação de design</strong></p>
-                        <div class="row">
-                            <div class="col-12 col-md-4">
-                                <p id="nomeClienteDesign">aqui irá o nome do cliente</p>
-                                <p id="emailClienteDesign">aqui irá o email do cliente</p>
-                                <p id="dataSolicitacaoDesign">aqui aparece a data da solicitação</p>
-                                <p id="status">aqui irá e status do serviço</p>
-                            </div>
-                            <div class="col-12 col-md-8">
-                                <p id="produtoDesign">Aqui será o produto a ser impresso</p>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p id="coresImpressaoDesign">cores da impressão</p>
-                                        <p id="ladosImpressaoDesign">lados a imprimir</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p id="unidadesDesign">unidades a imprimir</p>
-                                        <p id="materialImpressaoDesign">material da impressao</p>
-                                    </div>
-                                </div>
-                                <p id="ideiasDesign">aqui aparecerão as sugestões de design dadas pelo cliente.</p>
-                                <a href="" id="arquivoReferenciaDesign">Arquivo referência do design a criar</a>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -201,6 +88,8 @@
 
     </main>
 
+    <script src="js\resultadoBuscaDinamico.js"></script>
+    <script src="js\busca.js"></script>
 </body>
 
 </html>
