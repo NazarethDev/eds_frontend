@@ -1,74 +1,57 @@
 
-document.addEventListener('DOMContentLoaded', function () {
-    const submitButton = document.querySelector('button[type="submit"]');
+document.getElementById('formularioServicoSoftware').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-    submitButton.addEventListener('click', function (event) {
-        event.preventDefault();
+    const form = event.target;
 
-        function getValue(selector) {
-            const element = document.querySelector(selector);
-            return element ? element.value.trim() : null;
-        }
+    const getValue = name => form.querySelector(`[name="${name}"]`)?.value || '';
 
-        function getCheckedValue(name) {
-            const checked = document.querySelector(`input[name="${name}"]:checked`);
-            return checked ? checked.value : null;
-        }
+    const servicosSelecionados = [...form.querySelectorAll('input[name="servicos[]"]:checked')]
+        .map(cb => cb.value);
 
-        function getCheckedValues(name) {
-            return Array.from(document.querySelectorAll(`input[name="${name}"]:checked`))
-                        .map(el => el.value);
-        }
+    const periodoSelecionado = form.querySelector('input[name="domicilio.periodo"]:checked')?.value || null;
+    const dataSelecionada = document.getElementById('data')?.value || null;
 
-        function formatDate(isoDate) {
-            if (!isoDate) return null;
-            const [year, month, day] = isoDate.split('-');
-            return `${day}/${month}/${year}`;
-        }
+    const payload = {
+        nomeCliente: getValue('nomeCliente'),
+        contatoCliente: getValue('contatoCliente'),
+        contatoAlternativoCliente: getValue('contatoAlternativo'),
+        emailCliente: getValue('emailCliente'),
+        cpf: getValue('cpf'),
+        detalhesServico: "", // adicione se tiver campo específico
+        dispositivo: getValue('dispositivo'),
+        servicos: servicosSelecionados,
+        tempoUso: getValue('tempoUso'),
+        domicilio: {
+            logradouro: getValue('domicilio.logradouro'),
+            numeroCasa: getValue('domicilio.numeroCasa'),
+            cep: getValue('domicilio.cep'),
+            complemento: getValue('domicilio.complemento'),
+            periodo: periodoSelecionado,
+            data: dataSelecionada
+        },
+        fabricante: getValue('fabricante')
+    };
 
-        const requestBody = {
-            nomeCliente: getValue('input[name="nomeCliente"]'),
-            contatoCliente: getValue('input[name="contatoCliente"]'),
-            emailCliente: getValue('input[name="contatoCliente"]'),
-            contatoAlternativoCliente: getValue('input[name="contatoAlternativo"]'),
-            cpf: getValue('input[name="cpf"]') || null,
-            detalhesServico: getValue('textarea[name="detalhesServico"]'),
-            dispositivo: getValue('select[name="dispositivo"]'),
-            servicos: getCheckedValues('servicos[]'),
-            tempoUso: getValue('input[name="tempoUso"]'),
-            fabricante: getValue('select[name="fabricante"]'),
-
-            domicilio: {
-                logradouro: getValue('input[name="logradouro"]'),
-                numeroCasa: getValue('input[name="numeroCasa"]'),
-                cep: getValue('input[name="cep"]'),
-                complemento: getValue('input[name="complemento"]'),
-                periodo: getCheckedValue('domicilio.periodo'),
-                data: formatDate(getValue('input[name="domicilio.data"]'))
-            }
-        };
-
-        fetch('http://localhost:8080/software', {
+    try {
+        const response = await fetch('http://localhost:8080/software', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(requestBody)
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Formulário enviado com sucesso!');
-                 window.location.reload(); // se quiser limpar
-            } else {
-                return response.text().then(text => {
-                    throw new Error('Erro ao enviar: ' + text);
-                });
-            }
-        })
-        .catch(error => {
-            console.error(error);
-            alert('Ocorreu um erro ao enviar o formulário.');
+            body: JSON.stringify(payload)
         });
-    });
-});
 
+        if (response.ok) {
+            alert('Serviço enviado com sucesso!');
+            form.reset();
+        } else {
+            const errorData = await response.json();
+            console.error('Erro ao enviar:', errorData);
+            alert('Erro ao enviar serviço. Verifique os dados.');
+        }
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao conectar com o servidor.');
+    }
+});

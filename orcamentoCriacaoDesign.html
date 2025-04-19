@@ -34,7 +34,7 @@
                             <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html/#sobrenos">Sobre nós</a>
+                            <a class="nav-link" href="index.html#sobrenos">Sobre nós</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
@@ -53,7 +53,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
                                 <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
-                                <li><a class="dropdown-item" href="orcamentoFografia.html">Fotografias</a></li>
+                                <li><a class="dropdown-item" href="orcamentoFotografia.html">Fotografias</a></li>
                                 <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a>
                                 </li>
                                 <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a>
@@ -66,7 +66,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html/#contato">Contato</a>
+                            <a class="nav-link" href="index.html#contato">Contato</a>
                         </li>
                     </ul>
 
@@ -134,7 +134,7 @@
 
                         <h3 class="text-center">Detalhes da impressão dos arquivos</h3>
                         <div class="row mb-2 mt-3">
-                            <div class="col-12">
+                            <div class="col-6">
                                 <div class="form-floating">
                                     <select class="form-select" id="materialImpressao"
                                         aria-label="Material da impressão" name="materialImpressao" required>
@@ -151,8 +151,50 @@
                                         <option value="Papel canson 300g">Papel canson 300g</option>
                                         <option value="Papel fotográfico dupla face 180g">Papel fotográfico dupla face
                                             180g</option>
+                                        <option value="Alta alvura 150g">Alta alvura 150g</option>
+                                        <option value="Couché brilho 90g">Couché brilho 90g</option>
+                                        <option value="Couché brilho 115g">Couché brilho 115g</option>
+                                        <option value="Couché brilho 150g">Couché brilho 150g</option>
+                                        <option value="Couché brilho 250g">Couché brilho 250g</option>
+                                        <option value="Couché fosco 115g">Couché fosco 115gg</option>
+                                        <option value="Couché fosco 150g">Couché fosco 150g</option>
+                                        <option value="Couché fosco 170g">Couché fosco 170g</option>
+                                        <option value="Reciclado 90g">Reciclado 90g</option>
+                                        <option value="Reciclado 240g">Reciclado 240g</option>
+                                        <option value="Kraft 135g">Kraft 135g</option>
+
                                     </select>
                                     <label for="materialImpressao">Material</label>
+                                    <p class="text-danger small">*a depender do produto</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="produto" aria-label="Material da impressão"
+                                        name="materialImpressao" required>
+                                        <option value="Cartão de visitas">Cartão de visitas</option>
+                                        <option value="Folhas avulsas">Folhas avulsas</option>
+                                        <option value="Fotografias">Fotografias</option>
+                                        <option value="Flyer 105x148mm">Flyer 105x148mm</option>
+                                        <option value="Flyer 105x210mm">Flyer 105x210mm</option>
+                                        <option value="Flyer 148x210mm">Flyer 148x210mm</option>
+                                        <option value="Flyer 210x294mm">Flyer 210x294mm</option>
+                                        <option value="Papel fotográfico 180g">Flyer 297x420mm</option>
+                                        <option value="Papel offset 180g">Calendário A4 com foto</option>
+                                        <option value="Papel opaline 240g">Calendário A4 sem foto</option>
+                                        <option value="Papel canson 240g">Calendário A4 com foto em um dos lados
+                                        </option>
+                                        <option value="Calendário 15x20 sem foto">Calendário 15x20 sem foto</option>
+                                        <option value="Calendário 6,8x7,5 com foto (geladeira)">Calendário 6,8x7,5 com
+                                            foto (geladeira)</option>
+                                        <option value="Calendário 9x15 com foto">Calendário 9x15 com foto</option>
+                                        <option value="Calendário 15x20 com foto">Calendário 15x20 com foto</option>
+                                        <option value="Calendário com 12 fotos">Calendário com 12 fotos</option>
+                                        <option value="Calendário de mesa A4 colado">Calendário de mesa A4 colado
+                                        </option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                    <label for="produto">Produto</label>
                                 </div>
                             </div>
                         </div>
@@ -173,6 +215,7 @@
                                         <option value="Frente">Frente</option>
                                     </select>
                                     <label for="ladosImpressap">Lados impressos</label>
+                                    <p class="text-danger small">*a depender do produto</p>
                                 </div>
                             </div>
                         </div>
@@ -201,7 +244,7 @@
     </main>
     <script src="js\navBarForSmallScreens.js"></script>
     <script src="js\busca.js"></script>
-
+    <script src="js\envioApiCriacaoDesign.js"></script>
 </body>
 
 </html>

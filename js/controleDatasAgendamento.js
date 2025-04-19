@@ -3,6 +3,7 @@ $(document).ready(function() {
       format: 'yyyy-mm-dd',
       daysOfWeekDisabled: [0],
       autoclose: true,
-      todayHighlight: true
+      todayHighlight: true,
+      startDate: '0d' 
     });
   });

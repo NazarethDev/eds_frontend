@@ -34,7 +34,7 @@
                             <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html/#sobrenos">Sobre nós</a>
+                            <a class="nav-link" href="index.html#sobrenos">Sobre nós</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
@@ -53,7 +53,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
                                 <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
-                                <li><a class="dropdown-item" href="orcamentoFografia.html">Fotografias</a></li>
+                                <li><a class="dropdown-item" href="orcamentoFotografia.html">Fotografias</a></li>
                                 <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a>
                                 </li>
                                 <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a>
@@ -66,7 +66,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html/#contato">Contato</a>
+                            <a class="nav-link" href="index.html#contato">Contato</a>
                         </li>
                     </ul>
 
@@ -88,8 +88,8 @@
         </section>
         <div class="container mt-3 mb-3">
             <div class="d-flex justify-content-center">
-                <form action="post" id="formularioImpressao" enctype="multipart/form-data"
-                    action="http://localhost:8080/impressao" class="w-75">
+                <form method="post" id="formularioImpressao" enctype="multipart/form-data"
+                    action="http://localhost:8080/print" class="w-75">
                     <div class="row">
                         <div class="col-12">
                             <div class="form-floating mb-2">
@@ -216,7 +216,7 @@
                             <div class="col-6 justify-content-center">
                                 <h4 class="text-center justify-content-center">Lados impressos</h4>
                                 <br>
-                                <select class="form-select" aria-label="Disabled select example">
+                                <select class="form-select" aria-label="Disabled select example" name="ladosImpressao">
                                     <option value="frente">Frente</option>
                                     <option value="frente e verso" selected>Frente e verso</option>
                                 </select>
@@ -242,6 +242,7 @@
     </main>
     <script src="js\navBarForSmallScreens.js"></script>
     <script src="js\busca.js"></script>
+    <script src="js\envioApiFlyers.js"></script>
 
 </body>
 

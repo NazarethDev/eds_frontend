@@ -44,7 +44,7 @@
                             <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html/#sobrenos">Sobre nós</a>
+                            <a class="nav-link" href="index.html#sobrenos">Sobre nós</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
@@ -63,7 +63,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
                                 <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
-                                <li><a class="dropdown-item" href="orcamentoFografia.html">Fotografias</a></li>
+                                <li><a class="dropdown-item" href="orcamentoFotografia.html">Fotografias</a></li>
                                 <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a>
                                 </li>
                                 <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a>
@@ -76,7 +76,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html/#contato">Contato</a>
+                            <a class="nav-link" href="index.html#contato">Contato</a>
                         </li>
                     </ul>
 
@@ -98,7 +98,7 @@
         </section>
         <div class="container mt-3 mb-3">
             <div class="row g-5 d-flex flex-wrap align-items-start">
-                <form action="post" id="formularioServicoSoftware" enctype="multipart/form-data"
+                <form method="post" id="formularioServicoSoftware" enctype="multipart/form-data"
                     action="http://localhost:8080/conserto">
                     <div class="row">
                         <section id="formulario" class="col-md-6 col-12 text-start px-1v">
@@ -168,16 +168,16 @@
                             <div class="row mt-2 mb-0">
                                 <div class="col-4">
                                     <div class="form-floating mb-2">
-                                        <input type="text" class="form-control" id="floatingInput"
+                                        <input type="text" class="form-control" id="floatingInput" name="domicilio.cep"
                                             placeholder="name@example.com">
-                                        <label for="floatingInput" name="domicilio.cep">CEP</label>
+                                        <label for="floatingInput">CEP</label>
                                     </div>
                                 </div>
                                 <div class="col-8">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control" id="floatingInput"
-                                            placeholder="name@example.com">
-                                        <label for="floatingInput" name="domicilio.complemento">Complemento</label>
+                                            name="domicilio.complemento" placeholder="name@example.com">
+                                        <label for="floatingInput">Complemento</label>
                                     </div>
                                 </div>
                             </div>
@@ -204,21 +204,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row mt-3">
-                                        <div class="col-6">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="domicilio.periodo"
-                                                    id="exampleRadios3" value="Noite">
-                                                <label class="form-check-label" for="exampleRadios3">Noite</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-check">
+                                    <div class="row mt-3 justify-content-center">
+                                        <div class="col-12 justify-content-center">
+                                            <div class="form-check justify-content-center">
                                                 <input class="form-check-input" type="radio" name="domicilio.periodo"
                                                     id="exampleRadios4" value="Indiferente" checked>
                                                 <label class="form-check-label" for="exampleRadios4">Indiferente</label>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -310,8 +304,6 @@
     <script src="js\controleDatasAgendamento.js"></script>
     <script src="js\navBarForSmallScreens.js"></script>
     <script src="js\busca.js"></script>
-
-
 </body>
 
 </html>
