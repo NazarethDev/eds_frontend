@@ -22,61 +22,63 @@
     <main>
         <nav class="navbar navbar-expand-lg mb-5">
             <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-          
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html/#sobrenos">Sobre nós</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Orçamentos de eletrônica
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
-                      <li><a class="dropdown-item" href="orcamentoConserto.html">Consertos</a></li>
-                      <li><a class="dropdown-item" href="orcamentoSoftware.html">Software</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Serviços gráficos
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
-                      <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
-                      <li><a class="dropdown-item" href="orcamentoFografia.html">Fotografias</a></li>
-                      <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a></li>
-                      <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a></li>
-                      <li><a class="dropdown-item" href="orcamentoFlyers.html">Flyers</a></li>
-                      <li><a class="dropdown-item" href="orcamentoCalendario.html">Calendários</a></li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html/#sobrenos">Sobre nós</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Orçamentos de eletrônica
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoConserto.html">Consertos</a></li>
+                                <li><a class="dropdown-item" href="orcamentoSoftware.html">Software</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Serviços gráficos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
+                                <li><a class="dropdown-item" href="orcamentoFografia.html">Fotografias</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoFlyers.html">Flyers</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCalendario.html">Calendários</a></li>
 
 
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html/#contato">Contato</a>
+                        </li>
                     </ul>
-                  </li>
-          
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html/#contato">Contato</a>
-                  </li>
-                </ul>
-          
-                <form class="d-flex mt-2 mt-lg-0" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Contato ou email na encomenda"
-                    aria-label="Search">
-                  <button class="btn btn-outline-info" type="submit">Buscar</button>
-                </form>
-              </div>
+
+                    <form id="form-busca" class="d-flex mt-2 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" id="input-busca"
+                            placeholder="Contato ou email na encomenda" aria-label="Search" required>
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
-          </nav>
-          
+        </nav>
+
         <section class="container mt-5 mb-0 text-center">
             <div>
                 <h2>Solicitação de impressão</h2>
@@ -198,6 +200,8 @@
 
     </main>
     <script src="js\navBarForSmallScreens.js"></script>
+    <script src="js\busca.js"></script>
+
 </body>
 
 </html>
