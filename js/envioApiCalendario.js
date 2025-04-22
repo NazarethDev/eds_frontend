@@ -1,33 +1,36 @@
 document.getElementById("formularioImpressao").addEventListener("submit", async function (event) {
-  event.preventDefault(); // impede o envio padrão
+  event.preventDefault(); 
 
   const form = event.target;
   const formData = new FormData();
 
-  // Monta objeto JavaScript com os dados do formulário
+  var erroComEnum = "Material indefinido"
+
   const novaImpressao = {
       nomeCliente: form.nomeCliente.value,
       contatoCliente: form.contatoCliente.value,
       contatoAlternativoCliente: form.contatoAlternativo.value,
       emailCliente: form.emailCliente.value,
       cpf: form.cpf.value,
-      materialImpressao: null,
+      materialImpressao: "Papel fotográfico 180g",
       unidades: parseInt(form.unidades.value),
       ladosImpressao: null,
       coresImpressao: form.corImpressao.value,
       produto: form.produto.value
   };
 
-  // Anexa o JSON como string no campo "data"
-  formData.append("data", new Blob([JSON.stringify(novaImpressao)], { type: "application/json" }));
-
-  // Anexa o arquivo (se houver)
+  formData.append(
+    "data",
+    new Blob([JSON.stringify(novaImpressao)], { type: "application/json" })
+  );
+  
   const arquivo = form.arquivo.files[0];
   if (arquivo) {
       formData.append("arquivo", arquivo);
   }
 
   try {
+    console.log("Enviando:", JSON.stringify(novaImpressao, null, 2));
       const response = await fetch(form.action, {
           method: "POST",
           body: formData

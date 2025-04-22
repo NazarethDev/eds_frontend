@@ -36,6 +36,7 @@ document.getElementById('formularioImpressao').addEventListener('submit', async 
             form.reset();
         } else {
             const errorText = await response.text();
+            console.log(JSON.stringify(payload.dadosImpressao.materialImpressao));
             console.error("Erro na requisição:", errorText);
             alert("Erro ao enviar: " + errorText);
         }

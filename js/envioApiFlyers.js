@@ -14,7 +14,7 @@ document.getElementById("formularioImpressao").addEventListener("submit", async 
         materialImpressao: form.materialImpressao.value,
         unidades: parseInt(form.unidades.value),
         ladosImpressao: form.ladosImpressao.value,
-        coresImpressao: "", // Preencha se houver esse campo
+        coresImpressao: "colorido",
         produto: form.produto.value
     };
 

@@ -1,4 +1,4 @@
-const navbarToggler = document.getElementById('navbar-toggler');
+const navbarToggler = document.querySelector('.navbar-toggler');
 const navbarCollapse = document.getElementById('navbarSupportedContent');
 const body = document.body;
 

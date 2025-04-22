@@ -10,12 +10,12 @@ document.getElementById('formularioImpressao').addEventListener('submit', async 
         contatoCliente: form.contatoCliente.value,
         contatoAlternativoCliente: form.contatoAlternativo.value,
         emailCliente: form.emailCliente.value,
-        cpf: form.cpf.value || null,
+        cpf: form.cpf.value || "não informado",
         materialImpressao: form.materialImpressao.value,
         unidades: parseInt(form.unidades.value),
         ladosImpressao: form.ladosImpressap.value,
-        coresImpressao: null, // adicione um campo no formulário se quiser preencher
-        produto: "Fotos" 
+        coresImpressao: "colorido", 
+        produto: "Fotografias" 
     };
 
     // Adiciona o JSON ao FormData

@@ -18,7 +18,7 @@ document.getElementById('formularioServicoSoftware').addEventListener('submit', 
         contatoAlternativoCliente: getValue('contatoAlternativo'),
         emailCliente: getValue('emailCliente'),
         cpf: getValue('cpf'),
-        detalhesServico: "", // adicione se tiver campo específico
+        detalhesServico: getValue('detalhesServico'),
         dispositivo: getValue('dispositivo'),
         servicos: servicosSelecionados,
         tempoUso: getValue('tempoUso'),
