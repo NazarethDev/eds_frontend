@@ -1,0 +1,103 @@
+/* Definindo variáveis CSS com tons específicos */
+:root {
+    --bs-orange-300: #fcb045;
+    --bs-orange-500: #fd7e14;
+  
+    --bs-teal-300: #63e6be;
+  
+    --bs-white: #ffffff;
+  
+    --bs-pink-500: #d63384;
+  
+    --bs-blue-500: #0d6efd;
+  
+    --bs-yellow-400: #facc15;
+  }
+  
+  /* === BORDAS === */
+  .border-orange-300 {
+    border: 1px solid var(--bs-orange-300);
+  }
+  
+  .border-orange-500 {
+    border: 1px solid var(--bs-orange-500);
+  }
+  
+  .border-teal-300 {
+    border: 1px solid var(--bs-teal-300);
+  }
+  
+  .border-white {
+    border: 1px solid var(--bs-white);
+  }
+  
+  .border-pink-500 {
+    border: 1px solid var(--bs-pink-500);
+  }
+  
+  .border-blue-500 {
+    border: 1px solid var(--bs-blue-500);
+  }
+  
+  .border-yellow-400 {
+    border: 1px solid var(--bs-yellow-400);
+  }
+  
+  /* === FUNDO === */
+  .bg-orange-300 {
+    background-color: var(--bs-orange-300) !important;
+  }
+  
+  .bg-orange-500 {
+    background-color: var(--bs-orange-500) !important;
+  }
+  
+  .bg-teal-300 {
+    background-color: var(--bs-teal-300) !important;
+  }
+  
+  .bg-white {
+    background-color: var(--bs-white) !important;
+  }
+  
+  .bg-pink-500 {
+    background-color: var(--bs-pink-500) !important;
+  }
+  
+  .bg-blue-500 {
+    background-color: var(--bs-blue-500) !important;
+  }
+  
+  .bg-yellow-400 {
+    background-color: var(--bs-yellow-400) !important;
+  }
+  
+  /* === TEXTO === */
+  .text-orange-300 {
+    color: var(--bs-orange-300) !important;
+  }
+  
+  .text-orange-500 {
+    color: var(--bs-orange-500) !important;
+  }
+  
+  .text-teal-300 {
+    color: var(--bs-teal-300) !important;
+  }
+  
+  .text-white {
+    color: var(--bs-white) !important;
+  }
+  
+  .text-pink-500 {
+    color: var(--bs-pink-500) !important;
+  }
+  
+  .text-blue-500 {
+    color: var(--bs-blue-500) !important;
+  }
+  
+  .text-yellow-400 {
+    color: var(--bs-yellow-400) !important;
+  }
+  

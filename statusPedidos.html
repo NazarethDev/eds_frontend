@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="PT-BR" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status solicitações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/custom-colors.css">
+    <link rel="shortcut icon" href="assets/favicon.jpeg" type="image/x-icon">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg mb-5">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#sobrenos">Sobre nós</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Orçamentos de eletrônica
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoConserto.html">Consertos</a></li>
+                                <li><a class="dropdown-item" href="orcamentoSoftware.html">Software</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="orcamentosDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Serviços gráficos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="orcamentosDropdown">
+                                <li><a class="dropdown-item" href="orcamentoFolhasAvulsas.html">Folhas Avulsas</a></li>
+                                <li><a class="dropdown-item" href="orcamentoFotografia.html">Fotografias</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCriacaoDesign.html">Criação de Design</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoCartaoVisitas.html">Cartões de visita</a>
+                                </li>
+                                <li><a class="dropdown-item" href="orcamentoFlyers.html">Flyers</a></li>
+                                <li><a class="dropdown-item" href="orcamentoCalendario.html">Calendários</a></li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contato">Contato</a>
+                        </li>
+                    </ul>
+
+                    <form id="form-busca" class="d-flex mt-2 mt-lg-0" role="search">
+                        <input class="form-control me-2" type="search" id="input-busca"
+                            placeholder="Contato ou email na encomenda" aria-label="Search" required>
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-3 mb-3">
+            <div class="row">
+
+
+                <section class="col-6 mt-5" id="statusSoftware">
+                    <div class="col-12">
+                        <div id="resultadosSoftware" class="justify-content-center">
+                            <form class="row" id="formSoftware">
+                                <h4 class="justify-content-center text-center"><strong>Status dos serviços de
+                                        Software</strong>
+                                </h4>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="statusSoftwareServico" class="form-label">Status dos pedidos</label>
+                                    <select class="form-select" id="statusSoftwareServico" required>
+                                        <option selected value="novo">Novo</option>
+                                        <option value="cliente contatado">Cliente contatado</option>
+                                        <option value="em espera">Em espera</option>
+                                        <option value="pedido confirmado">Pedido confirmado</option>
+                                        <option value="processando">Processando</option>
+                                        <option value="aguarda retirada">Aguarda retirada</option>
+                                        <option value="entrega solicitada">Entrega solicitada</option>
+                                        <option value="finalizado">Finalizado</option>
+                                        <option value="cancelado">Cancelado</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="mesStatusSoftwareServico" class="form-label">Mês da solicitação</label>
+                                    <select class="form-select" id="mesStatusSoftwareServico" required>
+                                        <option selected value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6">Junho</option>
+                                        <option value="7">Julho</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mt-2">
+                                    <label for="validationTooltip04" class="form-label">Ano da solicitação</label>
+                                    <input type="number" name="anoSoftware" id="anoSoftware" class="form-select"
+                                        min="2025" value="2025">
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end mt-2">
+                                    <button type="button" class="btn btn-outline-info" id="buscarPorSoftware">buscar por
+                                        status</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="respostaParaStatusSoftware" class="row mt-3"></div>
+                </section>
+
+
+                <section class="col-6 mt-5" id="statusConsertos">
+                    <div class="col-12">
+                        <div id="resultadosConserto" class="justify-content-center">
+                            <form class="row" id="formConserto">
+                                <h4 class="justify-content-center text-center"><strong>Status dos serviços de
+                                        Conserto</strong>
+                                </h4>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="statusConserto" class="form-label">Status dos pedidos</label>
+                                    <select class="form-select" id="statusConserto" required>
+                                        <option selected value="novo">Novo</option>
+                                        <option value="cliente contatado">Cliente contatado</option>
+                                        <option value="em espera">Em espera</option>
+                                        <option value="pedido confirmado">Pedido confirmado</option>
+                                        <option value="processando">Processando</option>
+                                        <option value="aguarda retirada">Aguarda retirada</option>
+                                        <option value="entrega solicitada">Entrega solicitada</option>
+                                        <option value="finalizado">Finalizado</option>
+                                        <option value="cancelado">Cancelado</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="statusMesConserto" class="form-label">Mês da solicitação</label>
+                                    <select class="form-select" id="statusMesConserto" required>
+                                        <option selected value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6">Junho</option>
+                                        <option value="7">Julho</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mt-2">
+                                    <label for="anoConserto" class="form-label">Ano da solicitação</label>
+                                    <input type="number" name="anoConserto" id="anoConserto" class="form-select"
+                                        min="2025" value="2025">
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end mt-2">
+                                    <button type="button" class="btn btn-outline-info" id="buscarPorConserto">buscar
+                                        por status</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div id="respostaParaStatusConserto" class="col-12"></div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+
+
+        <div class="container mt-3 mb-3">
+            <div class="row">
+
+
+                <section class="col-6 mt-5" id="statusImpressoes">
+                    <div class="col-12">
+                        <div id="resultadosImpressao" class="justify-content-center">
+                            <form class="row" id="">
+                                <h4 class="justify-content-center text-center"><strong>Status dos serviços de
+                                        Impressão</strong>
+                                </h4>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="statusImpressao" class="form-label">Status dos pedidos</label>
+                                    <select class="form-select" id="statusImpressao" required>
+                                        <option selected value="novo">Novo</option>
+                                        <option value="cliente contatado">Cliente contatado</option>
+                                        <option value="em espera">Em espera</option>
+                                        <option value="pedido confirmado">Pedido confirmado</option>
+                                        <option value="processando">Processando</option>
+                                        <option value="aguarda retirada">Aguarda retirada</option>
+                                        <option value="entrega solicitada">Entrega solicitada</option>
+                                        <option value="finalizado">Finalizado</option>
+                                        <option value="cancelado">Cancelado</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="mesStatusImpressao" class="form-label">Mês da solicitação</label>
+                                    <select class="form-select" id="mesStatusImpressao" required>
+                                        <option selected value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6">Junho</option>
+                                        <option value="7">Julho</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mt-2">
+                                    <label for="anoImpressao" class="form-label">Ano da solicitação</label>
+                                    <input type="number" name="anoImpressao" id="anoImpressao" class="form-select"
+                                        min="2025" value="2025">
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end mt-2">
+                                    <button type="button" class="btn btn-outline-info" id="buscarPorImpressao">buscar
+                                        por status</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="respostaParaStatusImpressao" class="row mt-3"></div>
+                </section>
+
+                <section class="col-6 mt-5" id="statusDesigns">
+                    <div class="col-12">
+                        <div id="resultadosDesign" class="justify-content-center">
+                            <form class="row">
+                                <h4 class="justify-content-center text-center"><strong>Status dos serviços de
+                                        Criação de Design</strong>
+                                </h4>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="statusDesign" class="form-label">Status dos pedidos</label>
+                                    <select class="form-select" id="statusDesign" required>
+                                        <option selected value="novo">Novo</option>
+                                        <option value="cliente contatado">Cliente contatado</option>
+                                        <option value="em espera">Em espera</option>
+                                        <option value="pedido confirmado">Pedido confirmado</option>
+                                        <option value="processando">Processando</option>
+                                        <option value="aguarda retirada">Aguarda retirada</option>
+                                        <option value="entrega solicitada">Entrega solicitada</option>
+                                        <option value="finalizado">Finalizado</option>
+                                        <option value="cancelado">Cancelado</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 position-relative mt-2">
+                                    <label for="mesStatusDesign" class="form-label">Mês da solicitação</label>
+                                    <select class="form-select" id="mesStatusDesign" required>
+                                        <option selected value="1">Janeiro</option>
+                                        <option value="2">Fevereiro</option>
+                                        <option value="3">Março</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Maio</option>
+                                        <option value="6">Junho</option>
+                                        <option value="7">Julho</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Setembro</option>
+                                        <option value="10">Outubro</option>
+                                        <option value="11">Novembro</option>
+                                        <option value="12">Dezembro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3 mt-2">
+                                    <label for="anoDesign" class="form-label">Ano da solicitação</label>
+                                    <input type="number" name="anoImpressao" id="anoDesign" class="form-select"
+                                        min="2025" value="2025">
+                                </div>
+                                <div class="col-md-3 d-flex align-items-end mt-2">
+                                    <button type="button" class="btn btn-outline-info" id="buscarPorDesign">buscar
+                                        por status</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12" id="respostaParaStatusDesign"></div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="js\busca.js"></script>
+    <script src="js\navBarForSmallScreens.js"></script>
+    <script src="js\gestaoComStatusSoftware.js"></script>
+    <script src="js\gestaoComStatusConserto.js"></script>
+    <script src="js\gestaoComStatusImpressao.js"></script>
+    <script src="js\gestaoComStatusDesign.js"></script>
+
+</body>
+
+</html>

@@ -77,7 +77,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <section class="container-fluid mt-5 w-75">
-            <form method="post" action="https://localhost:8080/login">
+            <form id="loginForm">
                 <div class="d-flex justify-content-center align-items-start vh-100 pt-5">
                     <div class="border rounded w-50 p-4 shadow">
                         <div class="text-center">
@@ -86,25 +86,27 @@
 
                         <div name="login">
                             <div class="form-floating mb-2 mt-4">
-                                <input type="text" class="form-control" name="loginEmail" id="nomeCliente"
+                                <input type="text" class="form-control" name="loginEmail" id="loginEmail"
                                     placeholder=" " required>
                                 <label for="loginEmail">Email do login</label>
                             </div>
                         </div>
+
                         <div name="senha">
                             <div class="form-floating mb-2 mt-4">
                                 <input type="password" class="form-control" name="loginSenha" id="loginSenha"
                                     placeholder=" " required>
                                 <label for="loginSenha">Senha</label>
                             </div>
+
                             <div class="mt-4 d-flex justify-content-center">
                                 <button type="submit" class="btn btn-outline-light">Efetuar Login</button>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </form>
+
         </section>
 
     </main>

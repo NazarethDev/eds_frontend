@@ -283,6 +283,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
+        
+
         if (Array.isArray(dados.consertos)) {
             dados.consertos.forEach((conserto) => {
                 //serviço de conserto de aparelhos
