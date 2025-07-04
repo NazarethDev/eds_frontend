@@ -97,73 +97,73 @@ function renderizarResultadoSoftware(dados) {
 
             divDadosSoftwareService.appendChild(dataSoftware);
 
-           // Cria a div que conterá o form-floating (select + label)
-var divFloatingSelect = document.createElement("div");
-divFloatingSelect.classList.add("form-floating", "me-2");
+            // Cria a div que conterá o form-floating (select + label)
+            var divFloatingSelect = document.createElement("div");
+            divFloatingSelect.classList.add("form-floating", "me-2");
 
-// SELECT de status
-var selectStatus = document.createElement("select");
-selectStatus.classList.add("form-select");
-selectStatus.id = `floatingSelect-${software.id}`; // ID único por item
-selectStatus.setAttribute("aria-label", "Floating label select example");
+            // SELECT de status
+            var selectStatus = document.createElement("select");
+            selectStatus.classList.add("form-select");
+            selectStatus.id = `floatingSelect-${software.id}`; // ID único por item
+            selectStatus.setAttribute("aria-label", "Floating label select example");
 
-["novo", "cliente contatado", "em espera", "pedido confirmado", "processando", "aguarda retirada", "entrega solicitada", "finalizado", "cancelado"].forEach(status => {
-    var option = document.createElement("option");
-    option.value = status;
-    option.textContent = status;
-    selectStatus.appendChild(option);
-});
+            ["novo", "cliente contatado", "em espera", "pedido confirmado", "processando", "aguarda retirada", "entrega solicitada", "finalizado", "cancelado"].forEach(status => {
+                var option = document.createElement("option");
+                option.value = status;
+                option.textContent = status;
+                selectStatus.appendChild(option);
+            });
 
-// LABEL para o select
-var labelSelect = document.createElement("label");
-labelSelect.setAttribute("for", selectStatus.id);
-labelSelect.textContent = "Status";
+            // LABEL para o select
+            var labelSelect = document.createElement("label");
+            labelSelect.setAttribute("for", selectStatus.id);
+            labelSelect.textContent = "Status";
 
-// Adiciona o select e label na div form-floating
-divFloatingSelect.appendChild(selectStatus);
-divFloatingSelect.appendChild(labelSelect);
+            // Adiciona o select e label na div form-floating
+            divFloatingSelect.appendChild(selectStatus);
+            divFloatingSelect.appendChild(labelSelect);
 
-// BOTÃO de atualização
-var btnAtualizar = document.createElement("button");
-btnAtualizar.classList.add("btn", "btn-primary", "align-self-center");
-btnAtualizar.textContent = "Atualizar";
+            // BOTÃO de atualização
+            var btnAtualizar = document.createElement("button");
+            btnAtualizar.classList.add("btn", "btn-primary", "align-self-center");
+            btnAtualizar.textContent = "Atualizar";
 
-// Evento do botão
-btnAtualizar.addEventListener("click", function () {
-    const novoStatus = selectStatus.value;
-    const tipoEntidade = software.tipoEntidade.toLowerCase();
+            // Evento do botão
+            btnAtualizar.addEventListener("click", function () {
+                const novoStatus = selectStatus.value;
+                const tipoEntidade = software.tipoEntidade.toLowerCase();
 
-    fetch(`http://localhost:8080/gestao/changestatus/${tipoEntidade}/${software.id}`, {
-        method: "PUT",
-        headers: {
-            ...getAuthHeader(),
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ status: novoStatus })
-    })
-        .then(response => {
-            if (response.ok) {
-                alert("Status atualizado com sucesso!");
-            } else {
-                alert("Erro ao atualizar o status.");
-            }
-        })
-        .catch(error => {
-            console.error("Erro:", error);
-            alert("Erro na requisição.");
-        });
-});
+                fetch(`http://localhost:8080/gestao/changestatus/${tipoEntidade}/${software.id}`, {
+                    method: "PUT",
+                    headers: {
+                        ...getAuthHeader(),
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ status: novoStatus })
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert("Status atualizado com sucesso!");
+                        } else {
+                            alert("Erro ao atualizar o status.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Erro:", error);
+                        alert("Erro na requisição.");
+                    });
+            });
 
-// Cria a div de botões (linha flexível)
-var divBotoes = document.createElement("div");
-divBotoes.classList.add("d-flex", "justify-content-end", "align-items-center", "mt-1", "w-100");
+            // Cria a div de botões (linha flexível)
+            var divBotoes = document.createElement("div");
+            divBotoes.classList.add("d-flex", "justify-content-end", "align-items-center", "mt-1", "w-100");
 
-// Adiciona o select e o botão à div
-divBotoes.appendChild(divFloatingSelect);
-divBotoes.appendChild(btnAtualizar);
+            // Adiciona o select e o botão à div
+            divBotoes.appendChild(divFloatingSelect);
+            divBotoes.appendChild(btnAtualizar);
 
-// Adiciona a divBotoes ao final do divSoftware
-divSoftware.appendChild(divBotoes);
+            // Adiciona a divBotoes ao final do divSoftware
+            divSoftware.appendChild(divBotoes);
 
 
         });

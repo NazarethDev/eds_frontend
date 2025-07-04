@@ -93,7 +93,8 @@ function renderizarResultadosImpressao(dadosImpressao) {
             colUnidadesEMaterial.appendChild(unidadesImpressao);
 
             var arquivoImpressao = document.createElement("a");
-            arquivoImpressao.href = "arquivoImpressao";
+            // Define o link recebido pela API (relativo ao backend)
+            arquivoImpressao.href = "http://localhost:8080" + impressao.arquivoImpressao;
             arquivoImpressao.textContent = "arquivo a imprimir";
             arquivoImpressao.target = "_blank";
             divDadosImpressao.appendChild(arquivoImpressao)

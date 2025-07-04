@@ -79,10 +79,34 @@
             </div>
         </nav>
 
+        <section class="container d-flex justify-content-center text-center mt-4">
+            <div class="w-100">
+                <label for="status" class="form-label justify-content-center text-center">
+                    <strong>Filtrar todos no status:</strong>
+                </label>
+                <select class="form-select" id="status" required>
+                    <option selected value="novo" style="text-align: center;">novo</option>
+                    <option value="cliente contatado" style="text-align: center;">cliente contatado</option>
+                    <option value="em espera" style="text-align: center;">em espera</option>
+                    <option value="pedido confirmado" style="text-align: center;">pedido confirmado</option>
+                    <option value="processando" style="text-align: center;">processando</option>
+                    <option value="aguarda retirada" style="text-align: center;">aguarda retirada</option>
+                    <option value="entrega solicitada" style="text-align: center;">entrega solicitada</option>
+                    <option value="finalizado" style="text-align: center;">finalizado</option>
+                    <option value="cancelado" style="text-align: center;">cancelado</option>
+                </select>
+
+                <div class="container d-flex flex-column justify-content-center mt-3" id="todosEmUmStatus">
+
+                </div>
+            </div>
+        </section>
+
+
+
+
         <div class="container mt-3 mb-3">
             <div class="row">
-
-
                 <section class="col-6 mt-5" id="statusSoftware">
                     <div class="col-12">
                         <div id="resultadosSoftware" class="justify-content-center">
@@ -135,8 +159,6 @@
                     </div>
                     <div id="respostaParaStatusSoftware" class="row mt-3"></div>
                 </section>
-
-
                 <section class="col-6 mt-5" id="statusConsertos">
                     <div class="col-12">
                         <div id="resultadosConserto" class="justify-content-center">
@@ -191,16 +213,12 @@
                         <div id="respostaParaStatusConserto" class="col-12"></div>
                     </div>
                 </section>
-
-
             </div>
         </div>
 
 
         <div class="container mt-3 mb-3">
             <div class="row">
-
-
                 <section class="col-6 mt-5" id="statusImpressoes">
                     <div class="col-12">
                         <div id="resultadosImpressao" class="justify-content-center">
@@ -253,7 +271,6 @@
                     </div>
                     <div id="respostaParaStatusImpressao" class="row mt-3"></div>
                 </section>
-
                 <section class="col-6 mt-5" id="statusDesigns">
                     <div class="col-12">
                         <div id="resultadosDesign" class="justify-content-center">
@@ -308,21 +325,41 @@
                         <div class="col-12" id="respostaParaStatusDesign"></div>
                     </div>
                 </section>
-
-
             </div>
         </div>
 
 
+        <footer class="navbar navbar-expand-lg mt-auto w-100" id="footer">
+            <div class="container-fluid">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="loginPage.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contato">Contato</a>
+                    </li>
+                </ul>
+                <div class="col-sm-3 d-flex justify-content-end align-items-center text-end">
+                    <a href="https://www.linkedin.com/in/lorrannazareth/" class="no-decoration">© Nazareth</a>
+                    <style>
+                        .no-decoration {
+                            text-decoration: none !important;
+                            color: inherit !important;
+                        }
+                    </style>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <script src="js\busca.js"></script>
     <script src="js\navBarForSmallScreens.js"></script>
+    <script src="js\allInSameStatus.js"></script>
     <script src="js\gestaoComStatusSoftware.js"></script>
-    <script src="js\gestaoComStatusConserto.js"></script>
     <script src="js\gestaoComStatusImpressao.js"></script>
-    <script src="js\gestaoComStatusDesign.js"></script>
-
 </body>
 
 </html>

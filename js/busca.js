@@ -18,7 +18,7 @@ document.getElementById('form-busca').addEventListener('submit', function (e) {
         })
         .then(data => {
             // salva o resultado temporariamente
-            localStorage.setItem('resultadoBusca', JSON.stringify(data));
+            sessionStorage.setItem('resultadoBusca', JSON.stringify(data));
             // redireciona para a página de resultado
             window.location.href = 'resultadoBusca.html';
         })

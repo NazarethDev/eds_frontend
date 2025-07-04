@@ -16,6 +16,7 @@ function renderizarResultadosDesigns(dadosDesign) {
 
     if (Array.isArray(dadosDesign)) {
         dadosDesign.forEach((design) => {
+            
             var divDesign = document.createElement("div");
             divDesign.classList.add("row", "mb-2", "justify-content-center", "p-3", "border", "rounded");
             respostaParaStatusDesign.appendChild(divDesign);
@@ -97,7 +98,7 @@ function renderizarResultadosDesigns(dadosDesign) {
             dadosDesign.appendChild(ideiasDesign);
 
             var arquivoReferencia = document.createElement("a");
-            arquivoReferencia.href = design.arquivoReferencia;
+            arquivoReferencia.href = "http://localhost:8080" + design.arquivoReferencia;
             arquivoReferencia.textContent = "Arquivo de referência"
             arquivoReferencia.target = "_blank";
             dadosDesign.appendChild(arquivoReferencia);

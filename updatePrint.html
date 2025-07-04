@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova busca</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,7 +17,7 @@
 </head>
 
 <body>
-    <main>
+    <main id="main">
         <nav class="navbar navbar-expand-lg mb-5">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -74,40 +76,15 @@
                 </div>
             </div>
         </nav>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
         <section class="container-fluid mt-5 w-75">
-            <form id="loginForm">
-                <div class="d-flex justify-content-center align-items-start vh-100 pt-5">
-                    <div class="border rounded w-50 p-4 shadow">
-                        <div class="text-center">
-                            <p><strong>Login da gestão</strong></p>
-                        </div>
-
-                        <div name="login">
-                            <div class="form-floating mb-2 mt-4">
-                                <input type="text" class="form-control" name="loginEmail" id="loginEmail"
-                                    placeholder=" " required>
-                                <label for="loginEmail">Email do login</label>
-                            </div>
-                        </div>
-
-                        <div name="senha">
-                            <div class="form-floating mb-2 mt-4">
-                                <input type="password" class="form-control" name="loginSenha" id="loginSenha"
-                                    placeholder=" " required>
-                                <label for="loginSenha">Senha</label>
-                            </div>
-
-                            <div class="mt-4 d-flex justify-content-center">
-                                <button type="submit" class="btn btn-outline-light">Efetuar Login</button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-12">
+                <div id="updatePrint" class="justify-content-center">
                 </div>
-            </form>
-
+            </div>
         </section>
+
 
         <footer class="navbar navbar-expand-lg mt-auto w-100" id="footer">
             <div class="container-fluid">
@@ -133,13 +110,11 @@
                 </div>
             </div>
         </footer>
-
-
     </main>
-
+    <script src="js\uptadePrints.js"></script>
     <script src="js\busca.js"></script>
     <script src="js\navBarForSmallScreens.js"></script>
-    <script src="js\loginGestao.js"></script>
+
 </body>
 
 </html>
